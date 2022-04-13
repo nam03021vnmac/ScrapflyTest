@@ -4,7 +4,9 @@ import logging
 from colorlog import ColoredFormatter
 import scrapy
 from scrapy import logformatter
+from dotenv import load_dotenv, find_dotenv
 
+load_dotenv(find_dotenv())
 BOT_NAME = 'gearvn'
 
 SPIDER_MODULES = ['gearvn.spiders']
@@ -15,7 +17,7 @@ ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 CONCURRENT_REQUESTS = 1
-
+SCRAPFLY_API_KEY = os.environ.get('SCRAPFLY_API_KEY')
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html

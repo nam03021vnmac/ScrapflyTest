@@ -8,6 +8,7 @@ scrapy = "*"
 colorlog = "*"
 pillow = "*"
 scrapfly-sdk = {extras = ["scrapy"], version = "*"}
+python-dotenv = "*"
 
 [dev-packages]
 
